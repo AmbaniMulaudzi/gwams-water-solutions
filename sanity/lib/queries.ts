@@ -2,6 +2,7 @@
 
 export const siteSettingsQuery = `
   *[_type == "siteSettings"][0] {
+
     _id,
     title,
     description,
@@ -12,7 +13,7 @@ export const siteSettingsQuery = `
     address,
     location,
     contactPerson,
-    socialLinksgit add .
+    socialLinks,
   }
 `;
 
