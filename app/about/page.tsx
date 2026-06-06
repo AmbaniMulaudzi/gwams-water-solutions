@@ -72,7 +72,7 @@ export default function AboutPage() {
                   <strong className="text-[#0d1b3e] dark:text-white">Ambani Mulaudzi</strong>, built the business on hard work, honest service, and a deep understanding of the water challenges faced by people in the region.
                 </p>
                 <p>
-                  From installing borehole pump kits to building water tank bases from scratch, we handle every aspect of your water solution with professionalism and care.
+                From installing borehole pump kits to water storage solutions, we handle every aspect of your water solution with professionalism and care.
                 </p>
               </div>
 
