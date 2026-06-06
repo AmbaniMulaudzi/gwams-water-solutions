@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import { writeClient } from "@/sanity/lib/client";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -12,19 +11,6 @@ export async function POST(req: NextRequest) {
     if (!name || !phone || !service || !message) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
-
-    // Save to Sanity
-    await writeClient.create({
-      _type: "contactSubmission",
-      name,
-      email: email || "",
-      phone,
-      service,
-      location: location || "",
-      message,
-      submittedAt: new Date().toISOString(),
-      status: "new",
-    });
 
     // Send email notification via Resend
     await resend.emails.send({

@@ -12,7 +12,7 @@ export const siteSettingsQuery = `
     address,
     location,
     contactPerson,
-    socialLinks
+    socialLinksgit add .
   }
 `;
 
